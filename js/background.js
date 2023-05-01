@@ -98,6 +98,7 @@ chrome.storage.onChanged.addListener(async () => {
     arch,
     error,
     extensions,
+    extensionsTrack,
     extensionsInfo = [],
     tag,
     versions
@@ -111,6 +112,7 @@ chrome.storage.onChanged.addListener(async () => {
 
   const extensionsNew =
     extensions?.length > 0 &&
+    extensionsTrack &&
     extensionsInfo &&
     !extensionsInfo
       .filter(e => e)
